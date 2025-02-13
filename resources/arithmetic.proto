@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package arithmetics;
+
+service Arithmetics{
+	rpc Calculate(OperationRequest) returns (OperationResponse){}
+}
+
+message OperationRequest
+{
+	double a = 1;
+	double b = 2;
+
+	enum Operation{
+		ADD = 0;
+		SUBSTRACT = 1;
+		MULTIPLY = 2;
+		DIVIDE = 3;
+	}
+	Operation op = 3;
+}
+
+message OperationResponse
+{
+	double result = 1;
+	string error = 2;
+}
