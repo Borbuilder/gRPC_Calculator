@@ -1,6 +1,8 @@
 #pragma once
 
 #include "ClientDeclare.h"
+#include <atomic>
+#include <string>
 
 class ArithmeticalClient {
     std::shared_ptr<Channel> channel_;

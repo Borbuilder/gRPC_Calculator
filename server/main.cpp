@@ -1,5 +1,8 @@
 #include "ServerFunctions.h"
 
+#include <stdexcept>
+#include <iostream>
+
 int main() {
     std::atomic<bool> running(false);
     try {

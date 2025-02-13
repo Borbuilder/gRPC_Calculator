@@ -1,7 +1,10 @@
 #include "ClientFunctions.h"
 
 #include <tuple>
+#include <string>
 #include <sstream>
+#include <stdexcept>
+#include <iostream>
 
 OperationRequest::Operation ParseOperation(char op)
 {
@@ -12,7 +15,7 @@ OperationRequest::Operation ParseOperation(char op)
     case '*': return OperationRequest::MULTIPLY;
     case '/': return OperationRequest::DIVIDE;
     default:
-        break;
+        throw std::invalid_argument("Invalid operation");
     }
 }
 

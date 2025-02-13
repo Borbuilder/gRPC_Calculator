@@ -1,5 +1,11 @@
 #include "ClientFunctions.h"
 
+#include <thread>
+#include <stdexcept>
+#include <iostream>
+#include <string>
+#include <chrono>
+
 int main() {
     ArithmeticalClient client(grpc::CreateChannel(
         "localhost:50051", grpc::InsecureChannelCredentials()));
